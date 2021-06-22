@@ -1,12 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Getränk } from './getränk-model';
+
+
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
+
+
+
 export class MenuComponent implements OnInit {
+  
   csk = new Getränk(110, 'Kaffee schwarz klein', 2.5);
   csm = new Getränk(111, 'Kaffee schwarz mittel', 3.5);
   csg = new Getränk(112, 'Kaffee schwarz groß', 4.5);
@@ -15,9 +22,18 @@ export class MenuComponent implements OnInit {
   cag = new Getränk(123, 'Cappucino groß',5.10);
 
   
-  constructor() { }
+  constructor(private http : HttpClient) { 
+
+  }
 
   ngOnInit(): void {
+  }
+
+  private getraenkeLink = 
+
+  getGetraenke() {
+    //return this.http.get(this.getraenkeLink).subscribe( x =>
+  //});
   }
 
 }
