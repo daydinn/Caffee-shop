@@ -21,19 +21,21 @@ export class MenuComponent implements OnInit {
   cam = new Getränk(122, 'Cappucino mittel',4.50);
   cag = new Getränk(123, 'Cappucino groß',5.10);
 
-  
+  myGetraenke : any;
   constructor(private http : HttpClient) { 
 
+    
   }
 
   ngOnInit(): void {
   }
 
-  private getraenkeLink = 
+  private getraenkeLink = 'getraenke'
 
   getGetraenke() {
-    //return this.http.get(this.getraenkeLink).subscribe( x =>
-  //});
+    return this.http.get(this.getraenkeLink).subscribe( x =>{
+      this.myGetraenke = x;
+  });
   }
 
 }
