@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+
 import { Rec } from '../rec.model';
 
 @Component({
@@ -8,10 +9,17 @@ import { Rec } from '../rec.model';
   ]
 })
 export class RecListComponent implements OnInit {
-rec= new Rec('Expresso','3 Euro','https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG');
-  constructor() { }
+  @Output() recSelected = new EventEmitter<Rec>();
+  rec = new Rec('Expresso','Expresso','https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG'); //ich möchte diese rec an meinem rec item übergeben/dsw propheritybinding
+  
+  selectedRec: Rec;
+constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit()  {
   }
+ onSelected(rec: Rec){
+  this.recSelected.emit(rec);
 
+ }
+  
 }

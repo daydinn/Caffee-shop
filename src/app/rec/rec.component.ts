@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Rec } from './rec.model';
 
 @Component({
   selector: 'app-rec',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class RecComponent implements OnInit {
-
+selectedRec: Rec;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-body{
-padding: 40px;
-}
+body {
+    margin: 0;
+    font-family: 'Raleway', 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Rec } from '../rec.model';
 
 @Component({
   selector: 'app-rec-detail',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class RecDetailComponent implements OnInit {
 
+export class RecDetailComponent implements OnInit {
+@Input() selectedRec: Rec; 
+  
   constructor() { }
 
   ngOnInit(): void {
