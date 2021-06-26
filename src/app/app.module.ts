@@ -14,23 +14,19 @@ import { AngeboteComponent } from './angebote.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistrierungComponent } from './registrierung/registrierung.component';
 import { ShopLiAddComponent } from './shop-li/shop-li-add.component';
-import { MenuComponent } from './menu/menu.component';
+
+import { Menu2Component } from './menu2/menu2.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    
     ShopLiComponent,
-   
-  
-    
     AngeboteComponent,
     HeaderComponent,
-    MenuComponent,
-    
-  RegistrierungComponent,
+    RegistrierungComponent,
     ShopLiAddComponent,
+    Menu2Component,
         
    
   ],

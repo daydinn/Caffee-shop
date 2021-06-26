@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AngeboteComponent } from './angebote.component';
-import { MenuComponent } from './menu/menu.component';
+import { Menu2Component } from './menu2/menu2.component';
 import { RegistrierungComponent } from './registrierung/registrierung.component';
 
 const routes: Routes = [
   
   { path:'angebote-component' , component:AngeboteComponent},
-  { path:'menu-component' , component:MenuComponent},
+  
   {path : 'registrierung-component', component:RegistrierungComponent},
-  {path : 'menu-component', component:MenuComponent}
+  {path : 'menu2-component', component:Menu2Component},
+ 
  
 
 
