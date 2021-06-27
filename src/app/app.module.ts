@@ -18,6 +18,8 @@ import { ShopLiAddComponent } from './shop-li/shop-li-add.component';
 import { Menu2Component } from './menu2/menu2.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,8 @@ import { Menu2Component } from './menu2/menu2.component';
     RegistrierungComponent,
     ShopLiAddComponent,
     Menu2Component,
+    
+    
         
    
   ],

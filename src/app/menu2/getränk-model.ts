@@ -1,6 +1,6 @@
 import { stringify } from "@angular/compiler/src/util";
 
-export class Drink {
+export class Getränk {
 public id;
 public sorte;
 public preis;
