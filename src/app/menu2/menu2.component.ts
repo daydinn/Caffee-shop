@@ -28,24 +28,27 @@ export class Menu2Component implements OnInit {
       { id:"Id" , sorte: "sorte", preis: "preis" },
     
     ]
-    testGetränke: any;
+    
+    private getraenksUrl="http://localhost:8080/menu2-component"
+    myGetraenke: any;
 
-// constructor(private http: HttpClient){}
+ //constructor(private http: HttpClient){}
  
  constructor() { }
 
  ngOnInit(): void {
-//this.getGeatrenke();
+ //this.getGetraenke();
 
   }
 
-private geatrenkeUrl="gaetrenke"
-getGeatrenke(){
-//return this.htpp.get(this.eventsUrl).subscribe(x =>{
 
-// this.tableGetraenke = x;
+//getGetraenke(){
+//return this.http.get(this.getraenksUrl).subscribe(x =>{
+
+ //this.myGetraenke = x;
 //});
-}
+//}
+ 
 
 
 
