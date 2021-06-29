@@ -29,25 +29,32 @@ export class Menu2Component implements OnInit {
     
     ]
     
-    private getraenksUrl="http://localhost:8080/menu2-component"
+    private getraenksUrl="getränke"
     myGetraenke: any;
+    myCappucino: any;
 
- //constructor(private http: HttpClient){}
+ constructor(private http: HttpClient){}
  
- constructor() { }
+ //constructor() { }
 
  ngOnInit(): void {
- //this.getGetraenke();
+ this.getGetraenke();
 
   }
 
 
-//getGetraenke(){
-//return this.http.get(this.getraenksUrl).subscribe(x =>{
+getGetraenke(){
+return this.http.get(this.getraenksUrl).subscribe(x =>{
 
- //this.myGetraenke = x;
-//});
-//}
+ this.myGetraenke = x;
+});
+}
+getCappicuno(){
+  return this.http.get("cappucino").subscribe(x =>{
+  
+   this.myCappucino = x;
+  });
+  }
  
 
 

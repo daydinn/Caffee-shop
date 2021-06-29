@@ -14,15 +14,15 @@
    res.sendFile('index.html', { root: __dirname+'/dist/coffee-shop' });             
  });
 
- app.get('/getraenke', function(req,res) 
+ app.get('/getränke', function(req,res) 
  {   
  
     var con = mysql.createConnection({
-        database: "21_IT_Gruppe3",
+        database: "21_DB_Gruppe4",
         host: "195.37.176.178",
         port: "20133",
-        user: "21_IT_Grp_3",
-        password: "DEJoY2x5Y,Ve0WWCK!Wn#LjOXnKVwU~A"
+        user: "21_DB_Grp_4",
+        password: "Snc\"X|8WT\"/B'rwFeeURY19S@dqwiUYR"
     });
 
     con.connect(function(err)
@@ -30,7 +30,7 @@
         if(err) throw err;
         console.log("Connected");
 
-        con.query("SELECT * FROM _DB_WEB.Pruefung",
+        con.query("SELECT * FROM Getränke",
             function(error,results,fields){
                 console.log(results);
                 res.send(results); 
@@ -46,7 +46,44 @@
            
  });
 
- // listen (start app with node server.js) ======================================
+ app.get('/cappucino', function(req,res) 
+ {   
+ 
+    var con = mysql.createConnection({
+        database: "21_DB_Gruppe4",
+        host: "195.37.176.178",
+        port: "20133",
+        user: "21_DB_Grp_4",
+        password: "Snc\"X|8WT\"/B'rwFeeURY19S@dqwiUYR"
+    });
+
+    con.connect(function(err)
+    {
+        if(err) throw err;
+        console.log("Connected");
+
+        con.query("SELECT * FROM Getränke",
+            function(error,results,fields){
+                console.log(results);
+                res.send(results); 
+    
+                con.end(function(err)
+                {
+                    if(err) throw err;
+                    console.log("Connection end");
+                });   
+            }
+        );
+    });
+           
+ });
+
+
+
+
+
+
+// listen (start app with node server.js) ======================================
  app.listen(8080, function(){   
         console.log("App listening on port 8080");
  });

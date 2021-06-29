@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
     margin-top: 40px;
   }
 .tile {
-    background-color: #f0f0f0;
+    background-color: #009879;
     border-radius: 10px;
     border: 5px solid green;
   }
