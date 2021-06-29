@@ -6,7 +6,7 @@ public sorte;
 public preis;
     
   constructor(  id: number, sorte: string,  preis: number){
-  this.id = this.id;
+  this.id = id;
   this.sorte=sorte;
   this.preis=preis;
     

@@ -48,6 +48,8 @@ return this.http.get(this.getraenksUrl).subscribe(x =>{
 
  this.myGetraenke = x;
  console.log(this.myGetraenke);
+
+
 });
 }
 getCappicuno(){
