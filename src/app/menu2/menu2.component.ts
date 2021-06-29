@@ -29,7 +29,7 @@ export class Menu2Component implements OnInit {
     
     ]
     
-    private getraenksUrl="getränke"
+    private getraenksUrl="getraenke"
     myGetraenke: any;
     myCappucino: any;
 
@@ -47,6 +47,7 @@ getGetraenke(){
 return this.http.get(this.getraenksUrl).subscribe(x =>{
 
  this.myGetraenke = x;
+ console.log(this.myGetraenke);
 });
 }
 getCappicuno(){

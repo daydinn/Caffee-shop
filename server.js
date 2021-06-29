@@ -14,7 +14,7 @@
    res.sendFile('index.html', { root: __dirname+'/dist/coffee-shop' });             
  });
 
- app.get('/getränke', function(req,res) 
+ app.get('/getraenke', function(req,res) 
  {   
  
     var con = mysql.createConnection({
@@ -30,7 +30,7 @@
         if(err) throw err;
         console.log("Connected");
 
-        con.query("SELECT * FROM Getränke",
+        con.query("SELECT * FROM Getraenke",
             function(error,results,fields){
                 console.log(results);
                 res.send(results); 
@@ -59,6 +59,7 @@
 
     con.connect(function(err)
     {
+
         if(err) throw err;
         console.log("Connected");
 
