@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class Menu2Component implements OnInit {
 
+    myGetraenkeArray = [];
 
     csk = new Getränk(110, 'Kaffee schwarz klein', 2.5);
     csm = new Getränk(111, 'Kaffee schwarz mittel', 3.5);
@@ -48,6 +49,11 @@ return this.http.get(this.getraenksUrl).subscribe(x =>{
 
  this.myGetraenke = x;
  console.log(this.myGetraenke);
+ console.log("Laenge: "+this.myGetraenke.length);
+ this.myGetraenkeArray = this.myGetraenke;
+ 
+
+ 
 
 
 });
