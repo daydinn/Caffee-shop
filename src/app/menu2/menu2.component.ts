@@ -32,7 +32,7 @@ export class Menu2Component implements OnInit {
     
     private getraenksUrl="getraenke"
     myGetraenke: any;
-    myCappucino: any;
+    myZusatzstoffe: any;
 
  constructor(private http: HttpClient){}
  
@@ -40,6 +40,8 @@ export class Menu2Component implements OnInit {
 
  ngOnInit(): void {
  this.getGetraenke();
+ this.getZusatzstoffe();
+
 
   }
 
@@ -58,13 +60,19 @@ return this.http.get(this.getraenksUrl).subscribe(x =>{
 
 });
 }
-getCappicuno(){
-  return this.http.get("cappucino").subscribe(x =>{
+getZusatzstoffe(){
+  return this.http.get("zusatzstoffe").subscribe(x =>{
   
-   this.myCappucino = x;
+   this.myZusatzstoffe = x;
   });
-  }
- 
+
+}
+
+
+myFunction(x) {
+  console.log(x);
+  console.log("Row index is: " + x.rowIndex);
+} 
 
 
 

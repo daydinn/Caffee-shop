@@ -14,7 +14,7 @@
 <table class="styled-table">
   <thead>
       <tr>
-          <th>Getränke_ID</th>
+          <th>Getränke Nummer</th>
           <th>Soriment</th>
           <th>Preis</th>
           <th></th>
@@ -22,13 +22,11 @@
       </tr>
   </thead>
   <tbody>
-      
-      <!-- and so on... -->
-      <tr *ngFor ="let getraenk of myGetraenkeArray ">
+      <tr *ngFor ="let getraenk of myGetraenkeArray">
         <td>{{getraenk.Getraenke_ID}}</td>
         <td>{{getraenk.Sorte}}</td>
         <td>{{getraenk.Preis}}</td>
-        <td><button class="editbtn">add</button></td>
+        <td><button class="editbtn" >add</button></td>
     </tr>
 
   </tbody>
@@ -43,57 +41,34 @@
             <tr>
                 <th>Zusatzstoffe</th>
                 <th>Zusatzstoff_ID</th>
-                <th>BestellGetränke_ID</th>
+                <th>Preis</th>
                 <th></th>
               
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr *ngFor ="let zusatz of myZusatzstoffe">
+                <td>{{zusatz.Zusatzstoff_ID}}</td>
+                <td>{{zusatz.Bezeichnung}}</td>
+                <td>{{zusatz.ZusatzstoffPreis}}</td>
                 <td><button class="editbtn">add</button></td>
-          
-                
             </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><button class="editbtn">add</button></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><button class="editbtn">add</button></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><button class="editbtn">add</button></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><button class="editbtn">add</button></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><button class="editbtn">add</button></td>
-      </tr>
-      
-     <h1>Test</h1>
+                <th>Getraenk_NR</th>
+                <th>Anzahl</th>
+                <th>Zusatzstoff_ID</th>
+                <th></th>
+              
+            </tr>
+        </thead>
+            
 
      
-        
-            <!-- and so on... -->
-        </tbody>
       </table>
 
 </div>

@@ -46,7 +46,7 @@
            
  });
 
- app.get('/cappucino', function(req,res) 
+ app.get('/zusatzstoffe', function(req,res) 
  {   
  
     var con = mysql.createConnection({
@@ -63,7 +63,7 @@
         if(err) throw err;
         console.log("Connected");
 
-        con.query("SELECT * FROM Getränke",
+        con.query("SELECT * FROM Zusatzstoffe",
             function(error,results,fields){
                 console.log(results);
                 res.send(results); 
