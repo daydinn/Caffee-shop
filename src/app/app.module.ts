@@ -17,6 +17,9 @@ import { RegistrierungComponent } from './registrierung/registrierung.component'
 import { ShopLiAddComponent } from './shop-li/shop-li-add.component';
 
 import { Menu2Component } from './menu2/menu2.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { NavComponent } from './components/shared/nav/nav.component';
+import { ShoppingCartComponent } from './components/shared/shopping-cart/shopping-cart.component';
 
 
 
@@ -30,6 +33,9 @@ import { Menu2Component } from './menu2/menu2.component';
     RegistrierungComponent,
     ShopLiAddComponent,
     Menu2Component,
+    FooterComponent,
+    NavComponent,
+    ShoppingCartComponent,
     
     
         
