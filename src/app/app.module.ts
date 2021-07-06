@@ -24,6 +24,7 @@ import { GetraenkListComponent } from './shopping-cart/getraenk-list/getraenk-li
 import { CartComponent } from './shopping-cart/cart/cart.component';
 import { CartItemComponent } from './shopping-cart/cart/cart-item/cart-item.component';
 import { GetraenkItemComponent } from './shopping-cart/getraenk-list/getraenk-item/getraenk-item.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -45,6 +46,7 @@ import { GetraenkItemComponent } from './shopping-cart/getraenk-list/getraenk-it
     CartComponent,
     CartItemComponent,
     GetraenkItemComponent,
+    AboutComponent,
     
     
     
