@@ -4,7 +4,8 @@
  var path     = require('path'); 
  var mysql    = require('mysql'); 
  
- const bodyparser = require('body-parser')
+ const bodyparser = require('body-parser');
+const { analyzeAndValidateNgModules } = require('@angular/compiler');
 // Body-parser middleware
 app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json())
@@ -191,6 +192,117 @@ app.post('/reg', function(req,res)
         console.log("Connected");
 
         con.query("INSERT INTO Getraenke (Getraenke_ID,Sorte,description,Preis,imageURL) VALUES ("+id+","+sorte+","+description+","+preis+","+imageURL+")",
+            function(error,results,fields){
+                console.log(results);
+                console.log(error);
+                res.send(results); 
+
+    
+                con.end(function(err)
+                {
+                    if(err) throw err;
+                    console.log("Connection end");
+                });   
+            }
+        );
+    });
+           
+ });
+
+ //kaufen
+
+ app.post('/kaufen', function(req,res) 
+ { console.log("###########KAUFEN###################")  
+   console.log(req.body);  
+   //var ids = req.body[1].getraenkeId;
+   //var qtys = req.body[1].qty;
+   //console.log(ids);
+   //console.log(qtys);
+
+   let list="";
+   console.log(req.body.length-1); 
+   for (let i = 0; i <= req.body.length-1; i++) {
+     
+    list += "("+req.body[i].getraenkeId+","+req.body[i].qty+")";
+    if (i< req.body.length-1){list +="," }
+  }
+    list += ";"
+    
+    console.log("LIST : "+list);
+  
+
+
+    var con = mysql.createConnection({
+        database: "21_DB_Gruppe4",
+        host: "195.37.176.178",
+        port: "20133",
+        user: "21_DB_Grp_4",
+        password: "Snc\"X|8WT\"/B'rwFeeURY19S@dqwiUYR"
+    });
+
+    con.connect(function(err)
+    {
+
+        if(err) throw err;
+        console.log("Connected");
+
+        con.query("INSERT INTO Bestellungen_Getraenke(Getranke_ID,Anzahl) VALUES "+list,
+            function(error,results,fields){
+                console.log(results);
+                console.log(error);
+                res.send(results); 
+
+    
+                con.end(function(err)
+                {
+                    if(err) throw err;
+                    console.log("Connection end");
+                });   
+            }
+        );
+    });
+           
+ });
+
+ app.post('/kaufen', function(req,res) 
+ { console.log("###########KAUFEN###################")  
+   console.log(req.body);  
+   //var ids = req.body[1].getraenkeId;
+   //var qtys = req.body[1].qty;
+   //console.log(ids);
+   //console.log(qtys);
+
+   let list="";
+   console.log(req.body.length-1); 
+   for (let i = 0; i <= req.body.length-1; i++) {
+     
+    list += "("+req.body[i].getraenkeId+","+req.body[i].qty+")";
+    if (i< req.body.length-1){list +="," }
+  }
+    list += ";"
+    
+    console.log("LIST : "+list);
+    //entweder mit antwort von output des sql states arbeiten 
+    //erst Bestellung in Tabelle anlegen dann diese ID nutzen um Bestellungen_Getraenke zu füllen 
+    //alternativ mehrere Metoden für die kaufen() Methode schreiben welche 
+    //nacheinander die SQL Querys ausführt 
+    //Ablauf :Kunde anlegen(post), get kunden, Eintrag Best anlegen(post) , get die Länge speicher, (getranke anlegen)
+
+    var con = mysql.createConnection({
+        database: "21_DB_Gruppe4",
+        host: "195.37.176.178",
+        port: "20133",
+        user: "21_DB_Grp_4",
+        password: "Snc\"X|8WT\"/B'rwFeeURY19S@dqwiUYR"
+    });
+
+    con.connect(function(err)
+    {
+
+        if(err) throw err;
+        console.log("Connected");
+
+        con.query("INSERT INTO Bestellungen_Getraenke(Getranke_ID,Anzahl) VALUES "+list,
             function(error,results,fields){
                 console.log(results);
                 console.log(error);

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MessengerService } from 'src/app/services/messenger.service';
 import { Getraenk } from 'src/app/models/getraenk';
+import { HttpClient } from '@angular/common/http';
 //!%
 @Component({
   selector: 'app-cart',
@@ -22,7 +23,8 @@ cartItems = [
 cartTotal = 0
 
   
-  constructor(private msg: MessengerService) { }
+  constructor(private msg: MessengerService,
+              private http:HttpClient) { }
 
   ngOnInit() {
     this.msg.getMsg().subscribe((getraenk: Getraenk) => {
@@ -66,4 +68,17 @@ cartTotal = 0
       })
 
   }
+
+  kaufen(){
+    
+    console.log("kaufen fired");
+    console.log(this.cartItems);
+
+    
+
+    return this.http.post('kaufen',this.cartItems).subscribe();
+      
+
+  }
+
 }
