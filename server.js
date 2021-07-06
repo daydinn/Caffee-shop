@@ -160,16 +160,14 @@ app.use(bodyparser.json())
 //Saving Funktionen 
 
 //registrieren 
-
-
 app.post('/reg', function(req,res) 
  {   
    console.log(req.body);  
-   let id= req.body.id;
-   let sorte = req.body.sorte;
-   let preis = req.body.preis;
-   let description = req.body.description;
-   let imageURL = req.body.image;
+   var id= req.body.id;
+   var sorte = "\""+req.body.sorte+"\"";
+   var preis = req.body.preis;
+   var description = "\""+req.body.description+"\"";
+   var imageURL = "\""+req.body.image+"\"";
 
    console.log(id);
    console.log(sorte);
@@ -195,7 +193,9 @@ app.post('/reg', function(req,res)
         con.query("INSERT INTO Getraenke (Getraenke_ID,Sorte,description,Preis,imageURL) VALUES ("+id+","+sorte+","+description+","+preis+","+imageURL+")",
             function(error,results,fields){
                 console.log(results);
+                console.log(error);
                 res.send(results); 
+
     
                 con.end(function(err)
                 {
