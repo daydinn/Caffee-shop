@@ -1,5 +1,8 @@
 import { Injectable} from '@angular/core';
 import { Getraenk } from '../models/getraenk';
+import{HttpClient, HttpHeaders} from'@angular/common/http'
+import { TestBed } from '@angular/core/testing';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 // %
 
@@ -24,11 +27,31 @@ export class GetraenkService {
  ]
   
   
-  constructor() { }
+  constructor(private http: HttpClient) {
+
+    this.testFuel();
+
+
+
+   }
 //TODO: mit Getranke von API befüllen, (returns an Observable)
 
+testFuel(){
+  return this.http.get<any>('getraenke').subscribe(x =>{  
+   
+    this.getraenke.length=0;
+    
+    for (let i = 0; i < x.length; i++) {
+      this.getraenke.push(new Getraenk(x[i].Getraenke_ID,x[i].Sorte,x[i].description,x[i].Preis,x[i].imageURL))
+    }
+    
+    
+  });
+  
+}
+
 getGetraenke(): Getraenk[]{
-return this.getraenke //gibts die Array(getreank zurück)
+return this.getraenke //gibts die Array(getraenk zurück)
 }
 
 }

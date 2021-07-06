@@ -50,23 +50,23 @@ export class Menu2Component implements OnInit {
   }
 //für getränke von API(selber definiert)
   getDrinks(): Getraenk[]{
-  return this.getraenk //gibt observeble zurück
+  return this.getraenk //gibt observable zurück
   }
 
 
 getGetraenke(){
 return this.http.get(this.getraenksUrl).subscribe(x =>{
 
- this.myGetraenke = x;
- console.log(this.myGetraenke);
- console.log("Laenge: "+this.myGetraenke.length);
- this.myGetraenkeArray = this.myGetraenke;
+  this.myGetraenke = x;
+  console.log(this.myGetraenke);
+  console.log("Laenge: "+this.myGetraenke.length);
+  this.myGetraenkeArray = this.myGetraenke;
  
+  //for int i  = 0 ,  x.length, i++
+  // this.Getraenke.push(new Getraenk(x[i].Getraenke_ID,x.Sorte,))
 
- 
 
-
-});
+  });
 }
 getZusatzstoffe(){
   return this.http.get("zusatzstoffe").subscribe(x =>{

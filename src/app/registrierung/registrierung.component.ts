@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{HttpClient, HttpHeaders} from'@angular/common/http';
 
 @Component({
   selector: 'app-registrierung',
@@ -62,31 +63,28 @@ box-sizing: border-box;
     background-color: #ecf0f1;
   }
   
+
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   `]
 })
 export class RegistrierungComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
+
+  registrieren(){
+    
+    console.log("registrieren fired");
+    return this.http.post('reg',{id: "777", sorte:"WasserERES",description:"MOIN !Geiles Wasser", preis:"2.85", image:"https://google.com"}).subscribe();
+      
+
+
+    }
 
 }
