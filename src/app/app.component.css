@@ -1,65 +1,65 @@
 h2{
 
-color: #6f4e37;
-position:relative;
-right: -20%;
-margin-top: 30%;
-margin-bottom: 30%;
-
-}
-.img-coffee{
-width: 300px;
-height:300px;
-}
-
-
-.box{
-    width: 233px;
-    height: 200px;
-    border: 2px solid #009879;
-    padding: 50px;
-    margin: 20px;
-    background-color: #f0f0f0;
-}
-.box-text1{
-
-    color: orange;
-    position: relative;
-    top: 70%;
-    right: -6%;
-
-}
-.icon1{
-   
-    top: -70%;
-    position: relative;
+    color: #6f4e37;
+    position:relative;
     right: -20%;
-    color: #6f4e37;
-}
-
-
+    margin-top: 30%;
+    margin-bottom: 30%;
     
-.icon2{
-    top: -70%;
-    position: relative;
-    right: -21%;
-    color: #6f4e37;
-}
-.box-text2{
-    top: 72%;
-    position: relative;
-    right: -5%;
-    color: orange;
-}
-.icon3 {
-    top: -70%;
-    position: relative;
-    right: -24%;
-    color: #6f4e37;
-}
-.box-text3{
-    top: 72%;
-    position: relative;
-    right: -5%;
-    color: orange;
-}
+    }
+    .img-coffee{
+    width: 300px;
+    height:300px;
+    }
+    
+    
+    .box{
+        width: 233px;
+        height: 200px;
+        border: 2px solid #009879;
+        padding: 50px;
+        margin: 20px;
+        background-color: #f0f0f0;
+    }
+    .box-text1{
+    
+        color: orange;
+        position: relative;
+        top: 70%;
+        right: -6%;
+    
+    }
+    .icon1{
+       
+        top: -70%;
+        position: relative;
+        right: -20%;
+        color: #6f4e37;
+    }
+    
+    
+        
+    .icon2{
+        top: -70%;
+        position: relative;
+        right: -21%;
+        color: #6f4e37;
+    }
+    .box-text2{
+        top: 72%;
+        position: relative;
+        right: -5%;
+        color: orange;
+    }
+    .icon3 {
+        top: -70%;
+        position: relative;
+        right: -24%;
+        color: #6f4e37;
+    }
+    .box-text3{
+        top: 72%;
+        position: relative;
+        right: -5%;
+        color: orange;
+    }

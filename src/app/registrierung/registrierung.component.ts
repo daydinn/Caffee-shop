@@ -33,49 +33,29 @@ border-radius: 5px;
 margin: 5px 10px;
 width: 351px;
 box-sizing: border-box;
-
   }
-
-
-
-
-
-
-
   form {
     margin-bottom: 10px;
   }
-
   input[type=submit] {
     background-color: darkcyan;
     color: white;
-
-
     height: 40px;
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 30px;
     padding-left: 15px;
     padding-right: 15px;
-
-
-
-
-
-
   }
-
   .half input[type=text] {
     width: 180px;
     float: left;
   }
-
   #organisation {
     float: left;
     margin: 30px 0px;
     color: #009879;
   }
-
   /* focus wenn wir in input clicken */
   input:focus {
     border: 2px solid green;
