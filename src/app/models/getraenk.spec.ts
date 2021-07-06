@@ -1,2 +1,0 @@
-import { Getraenk } from './getraenk';
-
