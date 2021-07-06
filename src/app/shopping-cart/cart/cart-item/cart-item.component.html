@@ -1,0 +1,10 @@
+<!--
+%
+-->
+
+
+<div class="cart-item">
+<span>{{ cartItem.getraenkName}}</span> x
+<span>{{ cartItem.qty }}</span>: 
+<strong>{{ (cartItem.qty * cartItem.price) | currency: 'EUR' }}</strong>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Getränk } from './getränk-model';
+import { Getraenk } from './getraenk-model';
 import{HttpClient, HttpHeaders} from'@angular/common/http'
 import { Observable } from 'rxjs';
 
@@ -11,13 +11,17 @@ import { Observable } from 'rxjs';
 export class Menu2Component implements OnInit {
 
     myGetraenkeArray = [];
-
-    csk = new Getränk(110, 'Kaffee schwarz klein', 2.5);
-    csm = new Getränk(111, 'Kaffee schwarz mittel', 3.5);
-    csg = new Getränk(112, 'Kaffee schwarz groß', 4.5);
-    cak = new Getränk(120, 'Cappucino klein', 3.10);
-    cam = new Getränk(122, 'Cappucino mittel',4.50);
-    cag = new Getränk(123, 'Cappucino groß',5.10);
+   // Getränke von API/Localstorage
+   
+   getraenk : Getraenk[] = [
+   new Getraenk(1,'Product 1', 'This is the product 1 description. The product is reall cool!',100),
+   new Getraenk(2,'Product 1', 'This is the product 1 description. The product is reall cool!',150),
+   new Getraenk(3,'Product 1', 'This is the product 1 description. The product is reall cool!',50),
+   new Getraenk(4,'Product 1', 'This is the product 1 description. The product is reall cool!',200),
+   new Getraenk(5,'Product 1', 'This is the product 1 description. The product is reall cool!',100),
+   new Getraenk(6,'Product 1', 'This is the product 1 description. The product is reall cool!',150),
+   new Getraenk(7,'Product 1', 'This is the product 1 description. The product is reall cool!',250),
+  ]
  
     Getraenke = [
 
@@ -43,6 +47,10 @@ export class Menu2Component implements OnInit {
  this.getZusatzstoffe();
 
 
+  }
+//für getränke von API(selber definiert)
+  getDrinks(): Getraenk[]{
+  return this.getraenk //gibt observeble zurück
   }
 
 
