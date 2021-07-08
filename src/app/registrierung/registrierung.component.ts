@@ -13,9 +13,9 @@ import{HttpClient, HttpHeaders} from'@angular/common/http';
     margin-top: 40px;
   }
 .tile {
-    background-color: #009879;
+    background-color: ##efefef;
     border-radius: 10px;
-    border: 5px solid green;
+    border: 5px solid #009879;
   }
 h3 {
     padding-top: 10px;
@@ -26,7 +26,7 @@ input[type=email],
 input[type=password],
 input[type=submit],
 input[type=text] {
-background-color: #dedede;
+background-color: white;
 font-size: 16px;
 padding: 7px;
 border: 1px solid green;
@@ -39,7 +39,7 @@ box-sizing: border-box;
     margin-bottom: 10px;
   }
   input[type=submit] {
-    background-color: darkcyan;
+    background-color: #009879;
     color: white;
     height: 40px;
     margin-top: 10px;
