@@ -19,6 +19,7 @@ import { CartItemComponent } from './shopping-cart/cart/cart-item/cart-item.comp
 import { GetraenkItemComponent } from './shopping-cart/getraenk-list/getraenk-item/getraenk-item.component';
 import { AboutComponent } from './about/about.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -59,6 +60,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
+    FormsModule,
     
 
 

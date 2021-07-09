@@ -17,21 +17,34 @@
 <strong>Total</strong> {{ cartTotal | currency: 'EUR' }} 
 <button [hidden]= "isDisplaykaufen" (click)="kaufen()" class="btn btn-secondary" style="background-color:#009879;  " >Kaufen</button>
 
-
 </div>
 </li>
 </ul>
 
-<div [hidden]= "isDisplaybox" class="box">
-<div class="container-fluid">
-<br>
-<div class="row">
 
-<h5 class="" style="text-align:center">Please Enter your Informations</h5>
+<form #customerOrder ="ngForm" (ngSubmit) ="onClickSubmit(customerOrder.value)">
+    <input type="text" name="vorname" placeholder="Vorname" ngModel>
+    <input type="text" name="nachname" placeholder="Nachname" ngModel>
+    <input type="text" name="strasse" placeholder="Straße" ngModel>
+    <input type="number" name="hausnummer" placeholder="Hausnummer" ngModel>
+    <input type="number" name="plz" placeholder="PLZ" ngModel>
+    <input type="text" name="ort" placeholder="Ort" ngModel>
+    <input type="submit" value ="Order">
+</form>
+
+
+<!--
+<div [hidden]= "isDisplaybox" class="box">
+    <div class="container-fluid">
+        <br>
+    <div class="row">
+
+    <h5 class="" style="text-align:center">Please Enter your Informations</h5>
 
 </div>
 <hr>
 <br>
+
 <div class="row">
     <div class="form-group">
         
@@ -78,19 +91,7 @@
 
 </div>
 
-<div class="row">
-  
-   
-       
-    <div class="form-group">
-       
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="City">
-       </div>   
-     
 
-
-
-</div>
 
 <div class="row">
   
@@ -133,8 +134,8 @@
 </div>
 
 
-
 </div>
 </div>
 <br>
+-->
 

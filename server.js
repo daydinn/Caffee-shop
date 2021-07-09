@@ -160,7 +160,7 @@ app.use(bodyparser.json())
 
 //Saving Funktionen 
 
-//registrieren 
+//registrieren besipiel Funktion 
 app.post('/reg', function(req,res) 
  {   
    console.log(req.body);  
@@ -209,8 +209,115 @@ app.post('/reg', function(req,res)
            
  });
 
- //kaufen
+ 
+//registriert einen Kunden in der DB
+ app.post('/kundenreg', function(req,res) 
+ {   
+   console.log(req.body);  
+   var vorname= "\""+req.body.vorname+"\"";
+   var nachname = "\""+req.body.nachname+"\"";
+   var strasse = "\""+req.body.strasse+"\"";
+   var hausnummer = req.body.hausnummer;
+   var plz = req.body.plz;
+   var ort = "\""+req.body.ort+"\"";
 
+   console.log(vorname);
+   console.log(nachname);
+   console.log(strasse);
+   console.log(hausnummer);
+   console.log(plz);
+   console.log(ort);
+
+
+    var con = mysql.createConnection({
+        database: "21_DB_Gruppe4",
+        host: "195.37.176.178",
+        port: "20133",
+        user: "21_DB_Grp_4",
+        password: "Snc\"X|8WT\"/B'rwFeeURY19S@dqwiUYR"
+    });
+
+    con.connect(function(err)
+    {
+
+        if(err) throw err;
+        console.log("Connected");
+
+        con.query("INSERT INTO Kunde (K_ID,Name,Vorname,Straße,Hausnummer,Postleitzahl,Ort) VALUES ("+"DEFAULT"+","+nachname+","+vorname+","+strasse+","+hausnummer+","+plz+","+ort+");",
+            function(error,results,fields){
+                console.log("FOLGEND INSERT ID ");
+                console.log(results.insertId);
+                console.log("############");
+                console.log(error);
+               
+               //con.query()
+                res.send(String(results.insertId)); 
+                
+    
+                con.end(function(err){
+                    if(err) throw err;
+                    console.log("Connection end");
+                });   
+            }
+        );
+    });
+           
+ });
+
+//bestellung // Eintrag in Tabelle Bestellung (teil des Kauf prozesses)
+
+app.post('/bestellung', function(req,res) 
+ {   
+   console.log("IN BESTELLUNG SERVER ");
+   console.log(req.body);  
+   var K_ID = req.body.id;
+  
+   console.log(K_ID);
+   
+ 
+
+
+    var con = mysql.createConnection({
+        database: "21_DB_Gruppe4",
+        host: "195.37.176.178",
+        port: "20133",
+        user: "21_DB_Grp_4",
+        password: "Snc\"X|8WT\"/B'rwFeeURY19S@dqwiUYR"
+    });
+
+    con.connect(function(err)
+    {
+
+        if(err) throw err;
+        console.log("Connected");
+
+        con.query("INSERT INTO Bestellungen (Bestell_ID,K_ID) VALUES ("+"DEFAULT"+","+K_ID+");",
+            function(error,results,fields){
+                console.log("FOLGEND INSERT ID ");
+                console.log(results.insertId);
+                console.log("############");
+                console.log(error);
+               
+               //con.query()
+                res.send(String(results.insertId)); 
+                
+    
+                con.end(function(err){
+                    if(err) throw err;
+                    console.log("Connection end");
+                });   
+            }
+        );
+    });
+           
+ });
+
+
+
+
+
+ //kaufen
+/*
  app.post('/kaufen', function(req,res) 
  { console.log("###########KAUFEN###################")  
    console.log(req.body);  
@@ -262,8 +369,9 @@ app.post('/reg', function(req,res)
         );
     });
            
- });
+ }); */
 
+ //KAUFEN 
  app.post('/kaufen', function(req,res) 
  { console.log("###########KAUFEN###################")  
    console.log(req.body);  
@@ -271,13 +379,18 @@ app.post('/reg', function(req,res)
    //var qtys = req.body[1].qty;
    //console.log(ids);
    //console.log(qtys);
+   var Bestell_ID = req.body.Bestell_ID;
+    console.log("ALL ITEMS")
+    console.log(req.body.items);
+    console.log("ITEMS 0")
+    console.log(req.body.items[0]);
 
    let list="";
-   console.log(req.body.length-1); 
-   for (let i = 0; i <= req.body.length-1; i++) {
+   console.log(req.body.items.length-1); 
+   for (let i = 0; i <= req.body.items.length-1; i++) {
      
-    list += "("+req.body[i].getraenkeId+","+req.body[i].qty+")";
-    if (i< req.body.length-1){list +="," }
+    list += "("+req.body.items[i].getraenkeId+","+req.body.items[i].qty+","+Bestell_ID+")";
+    if (i< req.body.items.length-1){list +="," }
   }
     list += ";"
     
@@ -302,7 +415,7 @@ app.post('/reg', function(req,res)
         if(err) throw err;
         console.log("Connected");
 
-        con.query("INSERT INTO Bestellungen_Getraenke(Getranke_ID,Anzahl) VALUES "+list,
+        con.query("INSERT INTO Bestellungen_Getraenke(Getraenke_ID,Anzahl,Bestell_ID) VALUES "+list,
             function(error,results,fields){
                 console.log(results);
                 console.log(error);
