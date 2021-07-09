@@ -107,7 +107,7 @@ constructor(private msg: MessengerService,
   order(){
     this.isDisplaybox= !this.isDisplaybox;
     this.isDisplaykaufen= !this.isDisplaykaufen;
-    alert("Your order has been received!");
+    alert("Your " + this.cartTotal +   "€ order has been received!");
     this.cartTotal = 0
     this.cartItems = [];
     
