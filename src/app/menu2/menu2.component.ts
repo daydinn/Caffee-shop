@@ -4,11 +4,11 @@ import{HttpClient, HttpHeaders} from'@angular/common/http'
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-infopage',
-  templateUrl: './infopage.component.html',
-  styleUrls: ['./infopage.component.css']
+  selector: 'app-menu2',
+  templateUrl: './menu2.component.html',
+  styleUrls: ['./menu2.component.css']
 })
-export class InfopageComponent implements OnInit {
+export class Menu2Component implements OnInit {
 
     myGetraenkeArray = [];
    // Getränke von API/Localstorage

@@ -9,7 +9,7 @@ import { AngeboteComponent } from './angebote.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistrierungComponent } from './registrierung/registrierung.component';
 import { ShopLiAddComponent } from './shop-li/shop-li-add.component';
-import { InfopageComponent } from './delivers/infopage.component';
+import { Menu2Component } from './menu2/menu2.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { FiltersComponent } from './shopping-cart/filters/filters.component';
@@ -34,7 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     RegistrierungComponent,
     ShopLiAddComponent,
-    InfopageComponent,
+    Menu2Component,
     FooterComponent,
     ShoppingCartComponent,
     FiltersComponent,
