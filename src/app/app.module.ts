@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import{HttpClientModule}from'@angular/common/http';
-
+import { ShopLiComponent } from './shop-li/shop-li.component';
+import { AngeboteComponent } from './angebote.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistrierungComponent } from './registrierung/registrierung.component';
-
-import { InfopageComponent } from './info/infopage.component';
+import { ShopLiAddComponent } from './shop-li/shop-li-add.component';
+import { InfopageComponent } from './delivers/infopage.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { FiltersComponent } from './shopping-cart/filters/filters.component';
@@ -28,8 +29,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
+    ShopLiComponent,
+    AngeboteComponent,
     HeaderComponent,
     RegistrierungComponent,
+    ShopLiAddComponent,
     InfopageComponent,
     FooterComponent,
     ShoppingCartComponent,
