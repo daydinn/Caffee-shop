@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { APP_BOOTSTRAP_LISTENER, Component, OnInit } from '@angular/core';
 import { MessengerService } from 'src/app/services/messenger.service';
 import { Getraenk } from 'src/app/models/getraenk';
 import { HttpClient } from '@angular/common/http';
@@ -9,6 +9,11 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+
+  
+
+
+
 
   
 cartItems = [
@@ -23,7 +28,23 @@ cartItems = [
 cartTotal = 0
 
   
-  constructor(private msg: MessengerService,
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+constructor(private msg: MessengerService,
               private http:HttpClient) { }
 
   ngOnInit() {
@@ -68,17 +89,35 @@ cartTotal = 0
       })
 
   }
-
+  isDisplaykaufen= false;
+  isDisplaybox= true;
   kaufen(){
     
     console.log("kaufen fired");
     console.log(this.cartItems);
-
     
+    this.isDisplaybox= !this.isDisplaybox;
+    this.isDisplaykaufen= !this.isDisplaykaufen;
 
     return this.http.post('kaufen',this.cartItems).subscribe();
       
 
   }
+
+  order(){
+    this.isDisplaybox= !this.isDisplaybox;
+    this.isDisplaykaufen= !this.isDisplaykaufen;
+    alert("Your order has been received!");
+    this.cartTotal = 0
+    this.cartItems = [];
+    
+  
+  }
+
+
+ 
+
+
+ 
 
 }
