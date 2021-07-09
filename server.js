@@ -380,11 +380,7 @@ app.post('/bestellung', function(req,res)
    //console.log(ids);
    //console.log(qtys);
    var Bestell_ID = req.body.Bestell_ID;
-    console.log("ALL ITEMS")
-    console.log(req.body.items);
-    console.log("ITEMS 0")
-    console.log(req.body.items[0]);
-
+    
    let list="";
    console.log(req.body.items.length-1); 
    for (let i = 0; i <= req.body.items.length-1; i++) {
