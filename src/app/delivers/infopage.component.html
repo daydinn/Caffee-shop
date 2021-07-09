@@ -1,0 +1,211 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid" >
+<div >
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6" style="background-color: #f7f7f7;">
+
+
+<br>
+<br>
+<div class="row">  <!---    background: #f7f7f7;-->
+    <h4 style="text-align:center;"  >CoffeeShop at Home</h4>
+   
+    <br>
+    <br>
+
+    <p>Deinen persönlichen Coffee Moment ganz gemütlich in deinen eigenen vier Wänden genießen zu können, 
+    geht einfacher als du denkst: Es ist dein Kaffee, den du kennst und liebst, in deiner Lieblingstasse.
+</p>
+<br>
+<br>
+<h4 style="text-align:center" >Unsere Kaffees</h4>
+<p>Bei Starbucks dreht sich alles um Qualität. Unsere Leidenschaft für Kaffee wird nur von unserer Begeisterung, diese an unsere Gäste weiterzugeben, überboten.
+Egal, ob du dir alleine einen Kaffee gönnst oder zu Hause Gäste empfängst - es sollte immer ein entspannendes, beruhigendes und besinnliches Erlebnis sein.
+Bei so viel Auswahl ist es nicht leicht, den perfekten Kaffee zu finden.</p>
+</div>
+<br>
+<br>
+<div class="row">
+
+<h4 style="text-align:center" >Wir machen dir deinen Weg zu Starbucks jetzt noch einfacher – CoffeeShop kommt zu dir</h4>
+<p>
+Finde ganz einfach heraus, ob eine Lieferung in deiner Nähe verfügbar ist. Über unsere Online App kannst du deine Bestellung starten und dir deine Starbucks Lieblingsgetränke unkompliziert direkt nach Hause liefern lassen.Genieße deinen Starbucks Moment in deinen eigenen vier Wänden oder unterwegs.   
+</p>
+<br>
+<br>
+<hr>
+
+
+<br>
+<h4 style="text-align:center">HÄUFIG GESTELLTE FRAGEN </h4>
+<br>
+<br>
+<br>
+<br>
+<h5 style="">Wie kann ich bei CoffeeShop bestellen?</h5>
+<br>
+<br>
+<p>Um mit deiner Bestellung anzufangen, gehe in die Menu Seite, wähle deine Lieblingsprodukte aus dem Menü aus, gebe deine Adresse und Wünsche ein und schließe die Bestellung ganz bequem ab.</p>
+<br>
+<br>
+<h5 style="">Kann Ich alle Produkte liefern, die vor Ort finde?</h5>
+<br>
+<br>
+<p>Um die hohen Qualitätsstandards, die du von uns erwartest, aufrecht erhalten zu können, haben wir unser Menü für die Lieferung optimiert. Aus diesem Grund sind ausgewählte Produkte derzeit nicht lieferbar.</p>
+<br>
+<br>
+<h5 style="">Was mache ich, wenn ich meine Bestellung im Coffee House abholen möchte?</h5>
+<p>Wähle die Getränke aus dem Menu aus, gibt deine n Vor- und Nachnamen ein und lassen Sie das Adressfeld leer,dadurch kannst du deine Bestellung jederzeit vorbestellen und direkt im gewünschten Coffee House abholen</p>
+<br>
+<br>
+<h5 style="">Kann ich Sterne sammeln, wenn ich online bestelle?</h5>
+<br>
+<br>
+<p>Diese Funktion ist in unserem Markt noch nicht verfügbar, aber unser Entwicklungsteam arbeitet daran.</p>
+<br>
+<br>
+<h5 style="">Was muss ich tun, wenn ich ein Problem mit meiner Lieferung habe?</h5>
+<br>
+<br>
+<p>Bei Fragen oder Problemen sowie Anregungen zu deiner Bestellung wende dich gerne an den Kundenservice.<br>CoffeeShop@gmail.com  &  +4917411111111</p>
+
+</div>
+</div>
+
+
+
+<div class="col-md-3"></div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----Alte MenuSeite
+<div class="container-fluid">
+<div class="row">
+<h4>Getränke Auswahl</h4>
+</div>
+</div>
+<div class="container-fluid">
+<div class=row>
+<br>
+<br>
+<div class="col-md-6">
+<table class="styled-table">
+  <thead>
+      <tr>
+          <th>Getränke Nummer</th>
+          <th>Soriment</th>
+          <th>Preis</th>
+          <th></th>
+        
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor ="let getraenk of myGetraenkeArray">
+        <td>{{getraenk.Getraenke_ID}}</td>
+        <td>{{getraenk.Sorte}}</td>
+        <td>{{getraenk.Preis}}</td>
+        <td><button class="editbtn" >add</button></td>
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<div class="col-md-6">
+<h4>Zusatzstoffe</h4>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Zusatzstoffe</th>
+                <th>Zusatzstoff_ID</th>
+                <th>Preis</th>
+                <th></th>
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let zusatz of myZusatzstoffe">
+                <td>{{zusatz.Zusatzstoff_ID}}</td>
+                <td>{{zusatz.Bezeichnung}}</td>
+                <td>{{zusatz.ZusatzstoffPreis}}</td>
+                <td><button class="editbtn">add</button></td>
+            </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+            <tr>
+                <th>Getraenk_NR</th>
+                <th>Anzahl</th>
+                <th>Zusatzstoff_ID</th>
+                <th></th>
+              
+            </tr>
+        </thead>
+            
+
+     
+      </table>
+
+</div>
+</div>
+</div>
+<div container-fluid>
+
+<div class= "row">
+
+
+
+
+
+
+</div>
+--->
