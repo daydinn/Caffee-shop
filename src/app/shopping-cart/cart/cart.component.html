@@ -21,19 +21,26 @@
 </div>
 </li>
 </ul>
+<br>
+<br>
 
-
+<div class="container-fluid">
+    
+<div class="order-box">
+<div class="row"><h6 style="text-align:center; color:#6c757d;">Bitte geben Sie Ihre Daten ein</h6></div>
+<hr>
 <form #customerOrder ="ngForm" (ngSubmit) ="onClickSubmit(customerOrder.value)">
-    <input type="text" name="vorname" placeholder="Vorname" ngModel>
-    <input type="text" name="nachname" placeholder="Nachname" ngModel>
-    <input type="text" name="strasse" placeholder="Straße" ngModel>
-    <input type="number" name="hausnummer" placeholder="Hausnummer" ngModel>
-    <input type="number" name="plz" placeholder="PLZ" ngModel>
-    <input type="text" name="ort" placeholder="Ort" ngModel>
-    <input type="submit" value ="Order">
+  <div class="row" > <input type="text" class="form-control" name="vorname" placeholder="Vorname" ngModel></div>
+ <div class="row">  <input type="text" class="form-control" name="nachname" placeholder="Nachname" ngModel></div> 
+ <div class="row">   <input type="text" class="form-control" name="strasse" placeholder="Straße" ngModel></div>
+ <div class="row">   <input type="number" class="form-control" name="hausnummer" placeholder="Hausnummer" ngModel></div>
+ <div class="row">   <input type="number" class="form-control" name="plz" placeholder="PLZ" ngModel></div>
+ <div class="row">   <input type="text" class="form-control" name="ort" placeholder="Ort" ngModel></div>
+<div class="row"> <input type="submit"  class="btn btn-secondary" style= "background-color: #009879;" value ="Order"></div>     
 </form>
+</div>
 
-
+</div>
 <!--
 <div [hidden]= "isDisplaybox" class="box">
     <div class="container-fluid">
