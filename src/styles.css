@@ -34,5 +34,10 @@ body {
     border-bottom-right-radius:0;
   }
   .product-btn{
-  font-size:larger;
+  font-size:medium;
+  
   }
+  .btn-primary{
+  background-color: #009879
+  }
+ 
