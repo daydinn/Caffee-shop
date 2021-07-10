@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InfopageComponent } from './delivers/infopage.component';
+import { InfopageComponent } from './infoseite/infopage.component';
 import { RegistrierungComponent } from './registrierung/registrierung.component';
 import { AboutComponent } from './about/about.component';
 

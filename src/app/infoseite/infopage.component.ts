@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Getraenk } from './getraenk-model';
+import { Getraenk } from '../models/getraenk';
 import{HttpClient, HttpHeaders} from'@angular/common/http'
 import { Observable } from 'rxjs';
 
