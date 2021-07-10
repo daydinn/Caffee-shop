@@ -73,28 +73,36 @@ constructor(private msg: MessengerService,
   isDisplaykaufen= false;
   isDisplaybox= true;
   
+  //Methode umm den Warenkorb zu leeren
+  warenkorbLeeren(){
+
+
+  }
+
+  //Kaufen schreibt die Bestellung_Getranke Tabelle 
   kaufen(x){
     
-    console.log("kaufen fired");
-    console.log(this.cartItems);
+    console.log("kaufen fired"); //weg
+    console.log(this.cartItems); //weg
     
     let data = {Bestell_ID:x, items:this.cartItems}
-    console.log(data)
+    console.log(data) //Console log kann weg 
     //this.isDisplaybox= !this.isDisplaybox;
     //this.isDisplaykaufen= !this.isDisplaykaufen;
 
     return this.http.post('kaufen',data).subscribe(x =>{
-      console.log("Bestellung abgeschlossen")
+      console.log("Bestellung abgeschlossen") //Console Log kann weg
+      
     });
       
 
   }
-
+//hier könne man sachen Hiden oder ähnliches 
   displayFormular(){
 
     
   }
-
+  //Order ist useless macht nichts mehr, sollte weg können vorher prüfen 
   order(){
 
     
@@ -107,7 +115,7 @@ constructor(private msg: MessengerService,
   
   }
 
-
+  //hier wird die Bestellung Tabelle geschrieben 
   bestellung(K_ID){
 
       let kundenID = {id:K_ID};
@@ -115,8 +123,9 @@ constructor(private msg: MessengerService,
       console.log(kundenID);
       console.log(kundenID.id)
       return this.http.post('bestellung',kundenID).subscribe(x =>{
-        console.log(x);
-        this.kaufen(x);
+        console.log(x); //Console Log kann weg
+        this.kaufen(x); //Bestell_ID wird weiter gereicht 
+                        //Könnte man speichern um sie später auszugeben 
       });
     
     
@@ -127,14 +136,15 @@ constructor(private msg: MessengerService,
     
   }
 
-
+//hier kommt der Button klick an 
+//wir schreiben den Kunden in die DB
   onClickSubmit(data){
     console.log(data);
     let x_ID;
     if (this.cartItems.length>0) {
       return this.http.post('kundenreg',data).subscribe(x =>{
         x_ID = x;
-         this.bestellung(x_ID)       
+         this.bestellung(x_ID) //Kunden ID wird weitergereicht       
       });
     }
     
