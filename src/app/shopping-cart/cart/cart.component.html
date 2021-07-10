@@ -30,15 +30,40 @@
 <div class="row"><h6 style="text-align:center; color:#6c757d;">Bitte geben Sie Ihre Daten ein</h6></div>
 <hr>
 <form #customerOrder ="ngForm" (ngSubmit) ="onClickSubmit(customerOrder.value)">
-  <div class="row" > <input type="text" class="form-control" name="vorname" placeholder="Vorname" ngModel></div>
- <div class="row">  <input type="text" class="form-control" name="nachname" placeholder="Nachname" ngModel></div> 
- <div class="row">   <input type="text" class="form-control" name="strasse" placeholder="Straße" ngModel></div>
- <div class="row">   <input type="number" class="form-control" name="hausnummer" placeholder="Hausnummer" ngModel></div>
- <div class="row">   <input type="number" class="form-control" name="plz" placeholder="PLZ" ngModel></div>
- <div class="row">   <input type="text" class="form-control" name="ort" placeholder="Ort" ngModel></div>
+  <div class="row" > <input type="text" class="form-control" name="vorname" placeholder="Vorname" required minlength="3" [(ngModel)]="model.vorname" #vorname="ngModel"></div>
+ <div class="row">  <input type="text" class="form-control" name="nachname" placeholder="Nachname" required minlength="3" ngModel></div> 
+ <div class="row">   <input type="text" class="form-control" name="strasse" placeholder="Straße" required minlength="3" ngModel></div>
+ <div class="row">   <input type="number" class="form-control" name="hausnummer" placeholder="Hausnummer" required ngModel></div>
+ <div class="row">   <input type="number" class="form-control" name="plz" placeholder="PLZ" required ngModel></div>
+ <div class="row">   <input type="text" class="form-control" name="ort" placeholder="Ort" required minlength="3" ngModel></div>
 <div class="row"> <input type="submit"  class="btn btn-secondary" style= "background-color: #009879;" value ="Order"></div>     
 </form>
+    <div *ngIf="vorname.invalid && (vorname.dirty || vorname.touched)" class="alert alert-danger">
+        <div *ngIf="vorname.errors.required">Vorname ist Pflicht</div>
+        <div *ngIf="vorname.errors.minlength">Vorname muss min 3 Zeichen haben.</div>
+
+    </div>
 </div>
+
+<input type="text" id="name" name="name" class="alert"
+      required minlength="4" appForbiddenName="bob"
+      [(ngModel)]="model.name" #name="ngModel">
+
+<div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert alert-danger">
+
+  <div *ngIf="name.errors?.required">
+    Name is required.
+  </div>
+  <div *ngIf="name.errors?.minlength">
+    Name must be at least 4 characters long.
+  </div>
+  <div *ngIf="name.errors?.forbiddenName">
+    Name cannot be Bob.
+  </div>
+
+</div>
+
 
 </div>
 <!--
