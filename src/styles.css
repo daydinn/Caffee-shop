@@ -34,13 +34,8 @@ body {
     border-bottom-right-radius:0;
   }
   .product-btn{
-  font-size:medium;
+  font-size:larger;
+  background-color: purple;
   
   }
-  .btn-primary{
-  background-color: #009879;
-  }
  
-  .btn-primary:hover {
-  background-color: #00b300;
-  }

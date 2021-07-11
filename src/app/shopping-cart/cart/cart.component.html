@@ -1,8 +1,33 @@
-<!---
-%-->
+<style>
+ ::ng-deep .btn-primary {
+background-color: #009879;
+
+}
+::ng-deep .btn-primary:hover   {
+background-color: green;
+
+}
+::ng-deep .btn-primary:visited{
+background-color: green;
+}
+
+::ng-deep .btn-primary:active{
+background-color: green;
+}
+::ng-deep .btn-primary:after{
+background-color: green;
+}
 
 
-<div *ngIf="cartItems.length === 0" class="alert alert-info">Cart ist Empty</div>
+
+
+
+
+
+</style>
+
+
+<div *ngIf="cartItems.length === 0" class="alert alert-info" style="background-color:#009879; color:white;" >Cart ist Empty</div>
 
 
 
