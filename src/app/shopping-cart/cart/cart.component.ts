@@ -157,11 +157,14 @@ constructor(private msg: MessengerService,
     if (this.cartItems.length>0) {
       return this.http.post('kundenreg',data).subscribe(x =>{
         x_ID = x;
-         this.bestellung(x_ID) //Kunden ID wird weitergereicht       
+         this.bestellung(x_ID) //Kunden ID wird weitergereicht 
+              
       });
+      
     }
-    this.warenkorbLeeren();
+    
     alert("VorName: " +data.vorname+" Nachname "+data.nachname);
+     
   }
 
 
