@@ -139,7 +139,7 @@ constructor(private msg: MessengerService,
         this.kaufen(x); //Bestell_ID wird weiter gereicht 
                         //Könnte man speichern um sie später auszugeben 
       });
-    
+      //warenkorbLeeren()
     
   }
 
