@@ -150,6 +150,8 @@ constructor(private msg: MessengerService,
 //hier kommt der Button klick an 
 //wir schreiben den Kunden in die DB
   onClickSubmit(data){
+    this.cartTotal = 0
+    this.cartItems = [];
     console.log(data);
     let x_ID;
     if (this.cartItems.length>0) {
