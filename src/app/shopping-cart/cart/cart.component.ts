@@ -87,7 +87,8 @@ constructor(private msg: MessengerService,
   //Methode umm den Warenkorb zu leeren
   warenkorbLeeren(){
 
-
+    this.cartTotal = 0
+    this.cartItems = [];
   }
 
   //Kaufen schreibt die Bestellung_Getranke Tabelle 
@@ -150,8 +151,7 @@ constructor(private msg: MessengerService,
 //hier kommt der Button klick an 
 //wir schreiben den Kunden in die DB
   onClickSubmit(data){
-    this.cartTotal = 0
-    this.cartItems = [];
+    
     console.log(data);
     let x_ID;
     if (this.cartItems.length>0) {
@@ -160,7 +160,7 @@ constructor(private msg: MessengerService,
          this.bestellung(x_ID) //Kunden ID wird weitergereicht       
       });
     }
-    
+    this.warenkorbLeeren();
     alert("VorName: " +data.vorname+" Nachname "+data.nachname);
   }
 
