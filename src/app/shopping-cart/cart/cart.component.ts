@@ -24,6 +24,17 @@ cartItems = [
 
 cartTotal = 0
 
+model = {
+  name:null,
+  vorname:null,
+  nachname:null,
+  strasse:null,
+  hausnummer:null,
+  plz:null,
+  ort:null,
+
+}
+
 
 constructor(private msg: MessengerService,
               private http:HttpClient) { }
