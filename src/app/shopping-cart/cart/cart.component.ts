@@ -89,7 +89,7 @@ constructor(private msg: MessengerService,
 
     this.cartTotal = 0
     this.cartItems = [];
-    window.location.reload();  //ladet die Seite neu und leert dadurch auch die Input felder
+    //window.location.reload();  //ladet die Seite neu und leert dadurch auch die Input felder
   }
 
   //Kaufen schreibt die Bestellung_Getranke Tabelle 
