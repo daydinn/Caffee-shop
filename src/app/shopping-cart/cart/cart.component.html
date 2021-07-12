@@ -45,6 +45,7 @@ background-color: green;
 
 </div>
 </li>
+<li><div class="row"> <input type="submit"  class="btn btn-secondary" style= "color:#009879;background-color:  #fff; border-color: #009879; border:2px"  (click)="warenkorbLeeren();" value=Leeren ></div></li>
 </ul>
 <br>
 <br>
@@ -56,22 +57,37 @@ background-color: green;
 <hr>
 <form #customerOrder ="ngForm" (ngSubmit) ="onClickSubmit(customerOrder.value)">
   <div class="row" > <input type="text" class="form-control" name="vorname" placeholder="Vorname" required minlength="3" [(ngModel)]="model.vorname" #vorname="ngModel"></div>
- <div class="row">  <input type="text" class="form-control" name="nachname" placeholder="Nachname" required minlength="3" ngModel></div> 
- <div class="row">   <input type="text" class="form-control" name="strasse" placeholder="Straße" required minlength="3" ngModel></div>
- <div class="row">   <input type="number" class="form-control" name="hausnummer" placeholder="Hausnummer" required ngModel></div>
+ <div class="row">  <input type="text" class="form-control" name="nachname" placeholder="Nachname" required minlength="3" [(ngModel)]="model.nachname" #nachname="ngModel"></div> 
+ <div class="row">   <input type="text" class="form-control" name="strasse" placeholder="Straße" required minlength="3" [(ngModel)]="model.strasse" #strasse="ngModel"></div>
+ <div class="row">   <input type="number" class="form-control" name="hausnummer" placeholder="Hausnummer" required ngModel [(ngModel)]="model.hausnummer" #hausnummer="ngModel"></div>
  <div class="row">   <input type="number" class="form-control" name="plz" placeholder="PLZ" required ngModel></div>
  <div class="row">   <input type="text" class="form-control" name="ort" placeholder="Ort" required minlength="3" ngModel></div>
 <div class="row"> <input type="submit"  class="btn btn-secondary" style= "background-color: #009879;" value ="Order"></div>
 
 </form>
-<br>
-<br>
-<div class="row"> <input type="submit"  class="btn btn-secondary" style= "background-color: #009879;"  (click)="warenkorbLeeren();" value=Apply ></div>
-    <div *ngIf="vorname.invalid && (vorname.dirty || vorname.touched)" class="alert alert-danger">
+
+
+    <div *ngIf="vorname.invalid && (vorname.dirty || vorname.touched)" class="alert alert-danger" style="margin-top:10px;">
+        <br>
         <div *ngIf="vorname.errors.required">Vorname ist Pflicht</div>
         <div *ngIf="vorname.errors.minlength">Vorname muss min 3 Zeichen haben.</div>
 
     </div>
+
+    <div *ngIf="nachname.invalid && (nachname.dirty || nachname.touched)" class="alert alert-danger">
+        <br>
+        <div *ngIf="nachname.errors.required">Nachname ist Pflicht</div>
+        <div *ngIf="nachname.errors.minlength">Nachname muss min 3 Zeichen haben.</div>
+
+    </div>
+
+    <div *ngIf="strasse.invalid && (strasse.dirty || strasse.touched)" class="alert alert-danger">
+        <br>
+        <div *ngIf="strasse.errors.required">Strasse ist Pflicht</div>
+        <div *ngIf="strasse.errors.minlength">Strasse muss min 3 Zeichen haben.</div>
+
+    </div>
+
 </div>
 <br>
 

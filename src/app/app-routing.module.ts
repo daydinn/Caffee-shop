@@ -13,6 +13,8 @@ const routes: Routes = [
   {path : 'registrierung-component', component:RegistrierungComponent},
   {path : 'infopage-component', component:InfopageComponent},
   {path : 'about-component', component:AboutComponent },
+
+  //{path : '',redirectTo:'/bestellen',pathMatch:'full'}
   //{path : '**',component:BestellenComponent},
  
  
@@ -22,7 +24,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-imports: [RouterModule.forRoot(routes)],
+imports: [RouterModule.forRoot(routes /*,{onSameUrlNavigation:'reload'}*/)],
 exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  
+ }
