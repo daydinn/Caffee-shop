@@ -5,15 +5,16 @@ import { RegistrierungComponent } from './registrierung/registrierung.component'
 import { AboutComponent } from './about/about.component';
 import { BestellenComponent } from './bestellen/bestellen.component';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   
-  
+  {path: 'dashboard',component:DashboardComponent},
   {path : 'bestellen',component:BestellenComponent},
   {path : 'registrierung-component', component:RegistrierungComponent},
   {path : 'infopage-component', component:InfopageComponent},
   {path : 'about-component', component:AboutComponent },
-
+  
   //{path : '',redirectTo:'/bestellen',pathMatch:'full'}
   //{path : '**',component:BestellenComponent},
  

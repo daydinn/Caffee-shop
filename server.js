@@ -166,6 +166,44 @@ app.use(bodyparser.json())
            
  });
 
+//SUCHE NACH EINTRAG NACH NAME 
+
+app.post('/searchByName', function(req,res) 
+ {   
+     console.log(req.body)
+    var searchname = "\""+req.body.name+"\""
+
+    var con = mysql.createConnection({
+        database: "21_DB_Gruppe4",
+        host: "195.37.176.178",
+        port: "20133",
+        user: "21_DB_Grp_4",
+        password: "Snc\"X|8WT\"/B'rwFeeURY19S@dqwiUYR"
+    });
+
+    con.connect(function(err)
+    {
+        if(err) throw err;
+        console.log("Connected");
+
+        con.query("Select DISTINCT* From ((Kunde INNER JOIN Bestellungen ON Kunde.K_ID = Bestellungen.K_ID) INNER JOIN Bestellungen_Getraenke ON Bestellungen.Bestell_ID=Bestellungen_Getraenke.Bestell_ID) WHERE Kunde.Name="+searchname+")",
+            function(error,results,fields){
+                console.log(results);
+                res.send(results); 
+    
+                con.end(function(err)
+                {
+                    if(err) throw err;
+                    console.log("Connection end");
+                });   
+            }
+        );
+    });
+           
+ });
+
+
+
 
 //Saving Funktionen 
 

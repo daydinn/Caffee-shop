@@ -20,6 +20,8 @@ import { AboutComponent } from './about/about.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { BestellenComponent } from './bestellen/bestellen.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -43,6 +45,7 @@ import { BestellenComponent } from './bestellen/bestellen.component';
     GetraenkItemComponent,
     AboutComponent,
     BestellenComponent,
+    DashboardComponent,
     
    
     
@@ -60,6 +63,7 @@ import { BestellenComponent } from './bestellen/bestellen.component';
     HttpClientModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
   
     
 

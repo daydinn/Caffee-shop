@@ -12,13 +12,13 @@ export class BestellenComponent implements OnInit {
   
   constructor(private router:Router) { 
 
-     this.f5sub = router.events.subscribe((event) => {
+    /* this.f5sub = router.events.subscribe((event) => {
        console.log(event)
       if (event instanceof NavigationStart){
         let  browserRefresh = !router.navigated;
         console.log(browserRefresh)
       }
-    })
+    })*/ //versuch die Reload funktion auf F5 richtig zu Routen bzw das Event erstmal zu lesen 
 
   }
 
@@ -29,7 +29,7 @@ export class BestellenComponent implements OnInit {
   onReload(){
     console.log("Reload")
     this.router.navigateByUrl('/bestellen',{skipLocationChange:true}).then(()=>{
-      this.router.navigate(['RefreshComponent']);
+      this.router.navigate(['bestellen']);
     })
 
   }

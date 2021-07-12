@@ -1,0 +1,7 @@
+
+<form #customerOrder ="ngForm" (ngSubmit) ="searchName(customerOrder.value)">
+    <div class="row" > <input type="text" class="form-control" name="name" placeholder="name" required minlength="3" [(ngModel)]="model.name" #name="ngModel"></div>
+   
+  <div class="row"> <input type="submit"  class="btn btn-secondary" style= "background-color: #009879; margin-top: 8%;" value ="Order"></div>
+  
+  </form>

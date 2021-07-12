@@ -110,12 +110,12 @@ constructor(private msg: MessengerService,
       
 
   }
-//hier könne man sachen Hiden oder ähnliches 
+//hier könnte man sachen Hiden oder ähnliches 
   displayFormular(){
 
     
   }
-  //Order ist useless macht nichts mehr, sollte weg können vorher prüfen 
+  //Order ist useless macht nichts mehr, sollte weg können - vorher prüfen 
   order(){
 
     
@@ -164,9 +164,9 @@ constructor(private msg: MessengerService,
       
     }
     
-    alert("VorName: " +data.vorname+" Nachname "+data.nachname);
+    
   
-    // warenkorbLeeren();
+    
   }
 
 
