@@ -3,14 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { InfopageComponent } from './infoseite/infopage.component';
 import { RegistrierungComponent } from './registrierung/registrierung.component';
 import { AboutComponent } from './about/about.component';
+import { BestellenComponent } from './bestellen/bestellen.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   
   
-  
+  {path : 'bestellen',component:BestellenComponent},
   {path : 'registrierung-component', component:RegistrierungComponent},
   {path : 'infopage-component', component:InfopageComponent},
   {path : 'about-component', component:AboutComponent },
+  //{path : '**',component:BestellenComponent},
  
  
 

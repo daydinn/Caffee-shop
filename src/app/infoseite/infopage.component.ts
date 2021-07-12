@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class InfopageComponent implements OnInit {
 
-    myGetraenkeArray = [];
+   /* myGetraenkeArray = [];
    // Getränke von API/Localstorage
    
    getraenk : Getraenk[] = [
@@ -36,20 +36,20 @@ export class InfopageComponent implements OnInit {
     
     private getraenksUrl="getraenke"
     myGetraenke: any;
-    myZusatzstoffe: any;
+    myZusatzstoffe: any;*/
 
  constructor(private http: HttpClient){}
  
  //constructor() { }
 
  ngOnInit(): void {
- this.getGetraenke();
- this.getZusatzstoffe();
+ //this.getGetraenke();
+ //this.getZusatzstoffe();
 
 
   }
 //für getränke von API(selber definiert)
-  getDrinks(): Getraenk[]{
+ /* getDrinks(): Getraenk[]{
   return this.getraenk //gibt observable zurück
   }
 
@@ -81,7 +81,7 @@ myFunction(x) {
   console.log(x);
   console.log("Row index is: " + x.rowIndex);
 } 
-
+*/
 
 
 

@@ -23,6 +23,7 @@
     "bootstrap": "^5.0.2",
     "bootstrap-css-only": "^4.4.1",
     "express": "^4.17.1",
+    "jquery": "^3.6.0",
     "mysql": "^2.18.1",
     "nit": "^0.0.5",
     "rxjs": "~6.6.0",

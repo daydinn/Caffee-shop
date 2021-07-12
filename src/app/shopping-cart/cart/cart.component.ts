@@ -104,7 +104,7 @@ constructor(private msg: MessengerService,
 
     return this.http.post('kaufen',data).subscribe(x =>{
       console.log("Bestellung abgeschlossen") //Console Log kann weg
-      
+      this.warenkorbLeeren;
     });
       
 

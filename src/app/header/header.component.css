@@ -58,15 +58,20 @@ background-size: cover;
     navbar-text {
     color: pink;
     }
-    .navbar-tex {
-    background : red;
-    }
+    
+
+
+
 
 
     .color-brown {
     color: #815444;
     }
 
-    .color-white {
-        color: white;
-        }
+    
+
+    .nav-item .nav-link .active{
+
+        color:#fff;
+        font-style: bold;
+    }    

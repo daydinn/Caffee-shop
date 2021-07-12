@@ -21,6 +21,9 @@ app.use(bodyparser.json())
    res.sendFile('index.html', { root: __dirname+'/dist/coffee-shop' });             
  });
 
+
+ 
+
  app.get('/getraenke', function(req,res) 
  {   
  

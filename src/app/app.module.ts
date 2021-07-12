@@ -19,6 +19,7 @@ import { GetraenkItemComponent } from './shopping-cart/getraenk-list/getraenk-it
 import { AboutComponent } from './about/about.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { BestellenComponent } from './bestellen/bestellen.component';
 
 
 
@@ -41,6 +42,7 @@ import { FormsModule } from '@angular/forms';
     CartItemComponent,
     GetraenkItemComponent,
     AboutComponent,
+    BestellenComponent,
     
    
     
