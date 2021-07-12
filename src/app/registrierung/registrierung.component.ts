@@ -79,9 +79,9 @@ export class RegistrierungComponent implements OnInit {
   }
 
   registrieren(){
-    
-    console.log("registrieren fired");
-    return this.http.post('reg',{id: "777", sorte:"WasserERES",description:"MOIN Geiles Wasser", preis:"2.85", image:"https://google.com"}).subscribe();
+     //War Versuchs-Objekt für um einen Eintrag in der DB zu machen 
+    //console.log("registrieren fired");
+    //return this.http.post('reg',{id: "777", sorte:"WasserERES",description:"MOIN Geiles Wasser", preis:"2.85", image:"https://google.com"}).subscribe();
       
 
 
