@@ -89,6 +89,7 @@ constructor(private msg: MessengerService,
 
     this.cartTotal = 0
     this.cartItems = [];
+    window.location.reload();
   }
 
   //Kaufen schreibt die Bestellung_Getranke Tabelle 
