@@ -84,12 +84,12 @@ constructor(private msg: MessengerService,
   isDisplaykaufen= false;
   isDisplaybox= true;
   
-  //Methode umm den Warenkorb zu leeren
+  //Methode umm den Warenkorb zu leeren 
   warenkorbLeeren(){
 
     this.cartTotal = 0
     this.cartItems = [];
-    window.location.reload();
+    window.location.reload();  //ladet die Seite neu und leert dadurch auch die Input felder
   }
 
   //Kaufen schreibt die Bestellung_Getranke Tabelle 
@@ -140,7 +140,7 @@ constructor(private msg: MessengerService,
         this.kaufen(x); //Bestell_ID wird weiter gereicht 
                         //Könnte man speichern um sie später auszugeben 
       });
-      //warenkorbLeeren()
+     
     
   }
 
@@ -165,7 +165,8 @@ constructor(private msg: MessengerService,
     }
     
     alert("VorName: " +data.vorname+" Nachname "+data.nachname);
-     
+  
+    // warenkorbLeeren();
   }
 
 

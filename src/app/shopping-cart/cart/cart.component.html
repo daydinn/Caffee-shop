@@ -61,12 +61,12 @@ background-color: green;
  <div class="row">   <input type="number" class="form-control" name="hausnummer" placeholder="Hausnummer" required ngModel></div>
  <div class="row">   <input type="number" class="form-control" name="plz" placeholder="PLZ" required ngModel></div>
  <div class="row">   <input type="text" class="form-control" name="ort" placeholder="Ort" required minlength="3" ngModel></div>
-<div class="row"> <input type="submit"  class="btn btn-secondary" style= "background-color: #009879;" value ="Order"></div>
-
+<div class="row"> <input type="submit"  class="btn btn-secondary" style= "background-color: #009879; margin-top: 8%;" value ="Order"></div>
+<div class="row"> <input type="submit"  class="btn btn-secondary applybtn" style= "background-color: #009879; "  (click)="warenkorbLeeren();" value=Apply ></div>
 </form>
 <br>
 <br>
-<div class="row"> <input type="submit"  class="btn btn-secondary" style= "background-color: #009879;"  (click)="warenkorbLeeren();" value=Apply ></div>
+
     <div *ngIf="vorname.invalid && (vorname.dirty || vorname.touched)" class="alert alert-danger">
         <div *ngIf="vorname.errors.required">Vorname ist Pflicht</div>
         <div *ngIf="vorname.errors.minlength">Vorname muss min 3 Zeichen haben.</div>
