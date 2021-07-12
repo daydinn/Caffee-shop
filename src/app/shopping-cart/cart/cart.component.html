@@ -39,7 +39,7 @@ background-color: green;
 
 <li class="list-group-item active" style="height: 80px; background-color:#009879">
 <div style="position:absolute; bottom: 30px;">
-<strong>Total</strong> {{ cartTotal | currency: 'EUR' }} 
+<strong>Total</strong> {{ cartTotal | currency: 'EUR' }}
 <!--<button [hidden]= "isDisplaykaufen" (click)="displayFormular()" class="btn btn-secondary" style="background-color:#565e64;  " >Kaufen</button>-->
 <!-- KAUFEN Funktion MUSS WEG-->
 
@@ -51,19 +51,19 @@ background-color: green;
 <br>
 
 <div class="container-fluid">
-    
+
 <div class="order-box">
 <div class="row"><h6 style="text-align:center; color:#6c757d;">Bitte geben Sie Ihre Daten ein</h6></div>
 <hr>
 <form #customerOrder ="ngForm" (ngSubmit) ="onClickSubmit(customerOrder.value)">
   <div class="row" > <input type="text" class="form-control" name="vorname" placeholder="Vorname" required minlength="3" [(ngModel)]="model.vorname" #vorname="ngModel"></div>
- <div class="row">  <input type="text" class="form-control" name="nachname" placeholder="Nachname" required minlength="3" [(ngModel)]="model.nachname" #nachname="ngModel"></div> 
+ <div class="row">  <input type="text" class="form-control" name="nachname" placeholder="Nachname" required minlength="3" [(ngModel)]="model.nachname" #nachname="ngModel"></div>
  <div class="row">   <input type="text" class="form-control" name="strasse" placeholder="Straße" required minlength="3" [(ngModel)]="model.strasse" #strasse="ngModel"></div>
  <div class="row">   <input type="number" class="form-control" name="hausnummer" placeholder="Hausnummer" required ngModel [(ngModel)]="model.hausnummer" #hausnummer="ngModel"></div>
  <div class="row">   <input type="number" class="form-control" name="plz" placeholder="PLZ" required ngModel></div>
  <div class="row">   <input type="text" class="form-control" name="ort" placeholder="Ort" required minlength="3" ngModel></div>
-<div class="row"> <input type="submit"  class="btn btn-secondary" style= "background-color: #009879;" value ="Order"></div>
-
+<div class="row"> <input type="submit"  class="btn btn-secondary" style= "background-color: #009879; margin-top: 8%;" value ="Order"></div>
+<div class="row"> <input type="submit"  class="btn btn-secondary applybtn" style= "background-color: #009879; "  (click)="warenkorbLeeren();" value=Apply ></div>
 </form>
 
 
@@ -126,15 +126,15 @@ background-color: green;
 
 <div class="row">
     <div class="form-group">
-        
+
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Firstname">
        </div>
     </div>
 
 <div class="row">
-   
+
     <div class="form-group">
-       
+
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Lastname">
        </div>
 
@@ -145,26 +145,26 @@ background-color: green;
    <h6 class="" style="text-align:center">Adress</h6>
    <hr>
    <br>
-   
+
     <div class="row">
         <div class="form-group">
-           
+
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Street">
            </div>
         </div>
-        
+
         <div class="row">
             <div class="form-group">
-               
+
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Haus number">
                </div>
             </div>
 <div class="row">
-  
+
     <div class="form-group">
-       
+
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Zip">
-       </div>   
+       </div>
 
 
 
@@ -173,14 +173,14 @@ background-color: green;
 
 
 <div class="row">
-  
-   
-       
+
+
+
     <div class="form-group">
-       
+
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="City">
-       </div>   
-     
+       </div>
+
 
 
 
@@ -188,13 +188,13 @@ background-color: green;
 <br>
 <hr>
 <div class="row">
-  
-   
+
+
     <div class="form-group">
-       
+
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Remarks"></textarea>
       </div>
-     
+
 
 
 
@@ -217,4 +217,3 @@ background-color: green;
 </div>
 <br>
 -->
-
